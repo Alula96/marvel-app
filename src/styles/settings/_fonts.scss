@@ -5,7 +5,13 @@
 $font-base: 18;
 
 $fonts: (
-    'primary': (
-    ),
-    'callback': sans-serif
+  "primary": (
+    "regular": "Warsawgothic_Regular",
+    "bold": "Warsawgothic_Bold",
+  ),
+  "secondary": (
+    "regular": "Roboto-Regular",
+    "bold": "Roboto-Bold",
+  ),
+  "callback": sans-serif,
 ) !default;

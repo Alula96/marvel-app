@@ -1,12 +1,13 @@
-import "./MainLayout.template.scss";
-
 import React from "react";
+import Header from "../../organisms/Header/Header";
+
+import "./MainLayout.scss";
 
 const MainLayout = ({ children }) => {
   return (
     <React.Fragment>
+      <Header/>
       <main className="t-layout">
-        Hello world
         { children }
       </main>
     </React.Fragment>

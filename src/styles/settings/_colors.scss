@@ -1,3 +1,41 @@
 /*
  * COLORS
  */
+
+$mvl-red: #DC2328;
+$mvl-white: #FFF;
+$mvl-brown: #C9A972;
+$mvl-black: #202020;
+$mvl-dark-black: #151515;
+
+$mvl-gray-10: #F5F7FA;
+$mvl-gray-20: #EBEFF5;
+$mvl-gray-30: #DDE3ED;
+$mvl-gray-40: #C8D1E0;
+$mvl-gray-50: #AFBACC;
+$mvl-gray-60: #8E99AB;
+$mvl-gray-70: #707A8A;
+$mvl-gray-80: #5B606E;
+$mvl-gray-90: #434A54;
+$mvl-gray-100: #333840;
+
+$colors: (
+    'font': (
+      'primary': $mvl-dark-black,
+      'secondary': $mvl-gray-60,
+      'tertiary': $mvl-red,
+      'white': $mvl-white
+    ),
+    'button': (
+        'primary': $mvl-red,
+        'secondary': $mvl-dark-black,
+    ),
+    'button-border': (
+        'primary': $mvl-white,
+    ),
+    'background': (
+        'primary': $mvl-black,
+        'secondary': $mvl-white
+    )
+) !default;
+ 

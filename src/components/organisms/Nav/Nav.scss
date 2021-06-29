@@ -1,0 +1,19 @@
+.o-nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  &__logo {
+    flex-grow: 1;
+    span {
+      display: block;
+      margin: 0 auto;
+      width: fit-content;
+    }
+  }
+  &__list {
+    list-style-type: none;
+    flex-grow: 15;
+    padding: 0 5%;
+  }
+}
