@@ -18,7 +18,7 @@ afterEach(() => {
   container = null;
 });
 
-describe('GIVEN a Nav component', () => {
+describe('GIVEN a Nav component ', () => {
   it('and element prop is empty THEN It should render itself (logo and ul elements) without NavItems', () => {
     const elements = [];
     act(() => {

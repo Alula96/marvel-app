@@ -68,7 +68,7 @@ describe('GIVEN a NavItem component', () => {
     });
     const link = container.querySelector('a');
     expect(link.getAttribute('href')).toBe(url);
-    expect(link.innerHTML).toBe(label);
+    expect(link.textContent).toBe(label);
     expect(link.className).toBe('a-nav-item');
   });
 });

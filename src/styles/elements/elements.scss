@@ -4,3 +4,30 @@ html,
 body {
   font-family: get-font("primary", "regular");
 }
+
+.decorated-title {
+  position: relative;
+  margin: 35px 0;
+  line-height: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  color: #fff;
+
+  &:after,
+  &:before {
+    background-color: #c6a972;
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    -webkit-transform: rotate(-45deg) skewX(45deg);
+    transform: rotate(-45deg) skewX(45deg);
+    width: 30px;
+  }
+  &:before {
+    left: 53px;
+    top: 6px;
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+  }
+}
