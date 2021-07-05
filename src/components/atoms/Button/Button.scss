@@ -1,0 +1,51 @@
+@import '../../../styles/settings/settings.scss';
+@import '../../../styles/tools/tools.scss';
+
+.a-button {
+  text-transform: uppercase;
+  font-weight: bold;
+
+  font-size: calculate-size(35);
+  min-width: calculate-size(120);
+  padding: calculate-size(5) 0;
+  cursor: pointer;  
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &--primary {
+    background-color: get-color('button', 'primary');
+    a, span {
+      color: get-color('font', 'white');
+    }
+
+    a {
+      text-decoration: none;
+      &:visited {
+        color: get-color('font', 'white');
+      }
+    }
+  }
+
+  &--arrow-animation {
+    content: '';
+    -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
+    transition: clip-path 0.4s cubic-bezier(0.2, 1, 0.8, 1), -webkit-clip-path 0.4s cubic-bezier(0.2, 1, 0.8, 1);
+    
+    &:hover {
+      -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+      clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+      & > * {
+        transform: translate3d(-10px,0,0);
+      }
+    }
+    
+    & > * {
+      display: block;
+      transition: transform 0.4s cubic-bezier(0.2, 1, 0.8, 1);
+    }
+  }
+
+}

@@ -1,1 +1,44 @@
 /* styling for bare HTML elements (like H1, A, etc.). These come with default styling from the browser so we can redefine them here. */
+
+html,
+body,
+#root {
+  font-family: get-font("primary", "regular");
+   min-height: 100%;
+}
+
+#root {
+  position: relative;
+  &::after {
+    content: '';
+    display: block;
+    height: 250px;
+  }
+}
+
+.decorated-title {
+  position: relative;
+  margin: 35px 0;
+  line-height: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  color: #fff;
+
+  &:after,
+  &:before {
+    background-color: #c6a972;
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    -webkit-transform: rotate(-45deg) skewX(45deg);
+    transform: rotate(-45deg) skewX(45deg);
+    width: 30px;
+  }
+  &:before {
+    left: 53px;
+    top: 6px;
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+  }
+}

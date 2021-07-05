@@ -1,0 +1,15 @@
+@import '../../../styles/settings/settings.scss';
+@import '../../../styles/tools/tools.scss';
+
+.a-nav-item {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  color: get-color('font', 'primary');
+  font-size: 2rem;
+
+
+  &--selected {
+    border-bottom: 5px solid get-color('font', 'primary');
+  }
+}

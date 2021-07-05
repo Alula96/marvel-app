@@ -1,0 +1,53 @@
+@import '../../../../styles/settings/settings.scss';
+@import '../../../../styles/tools/tools.scss';
+
+$skewDeg: 18deg;
+$magicVH: 35vh;
+$scrollTime: 1s;
+
+.o-banner {
+  overflow: hidden;
+  position: relative;
+  height: 40vh;
+  min-height: calculate-size(400);
+  max-height: calculate-size(450);
+  width: 100%;
+
+  &__half {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    transition: transform $scrollTime;
+
+    &--left {
+      left: 0;
+      transform: translate3d(-$magicVH, -100%, 0);
+        }
+
+    &--right {
+      left: 50%;
+      transform: translate3d($magicVH, 100%, 0);
+    }
+
+    .o-banner.active & {
+      transform: translate3d(0,0,0);
+    }
+  }
+
+  &__skewed {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 140%;
+    height: 100%;
+    transform: skewX($skewDeg);
+
+    .o-banner__half--left & {
+      left: -40%;
+    }
+    .o-banner__half--right & {
+      right: -40%;
+    }
+  }
+}

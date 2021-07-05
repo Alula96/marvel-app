@@ -1,1 +1,16 @@
-
+@include font-face(
+  get-font("primary", "regular"),
+  "../../../public/fonts/Warsawgothic/"
+);
+@include font-face(
+  get-font("primary", "bold"),
+  "../../../public/fonts/Warsawgothic/"
+);
+@include font-face(
+  get-font("secondary", "regular"),
+  "../../../public/fonts/Roboto/"
+);
+@include font-face(
+  get-font("secondary", "bold"),
+  "../../../public/fonts/Roboto/"
+);
