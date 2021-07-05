@@ -1,0 +1,56 @@
+@import '../../../styles/settings/settings.scss';
+@import '../../../styles/tools/tools.scss';
+
+.o-footer {
+  
+  position: absolute;
+  bottom: 0;
+  
+  display: flex;
+  
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: get-color('background', 'tertiary');
+
+  &__section {
+    width: 50%;
+    padding: 1rem;
+    header {
+      font-size: calculate-size(30);
+      color: get-color('font', 'secondary');
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-family: get-font('secondary', 'regular');
+      line-height: 1.3rem;
+    }
+  }
+
+  &__links {
+    display: flex;
+    justify-content: center;
+
+    article {
+      width: fit-content;
+      padding: 0.5rem 1rem;
+  
+      display: flex;
+      align-items: center;
+  
+      img {
+        max-width: 25px;
+        margin-right: 1rem;
+      }
+
+      a {
+        font-family: get-font('secondary', 'bold');
+        font-size: calculate-size(16);
+        color: get-color('font', 'secondary');
+        letter-spacing: 1px;
+        &:visited {
+          color: get-color('font', 'secondary');
+        }
+      }
+    }
+  }
+}

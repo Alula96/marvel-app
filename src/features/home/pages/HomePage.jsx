@@ -1,7 +1,7 @@
 import React from "react";
 import Banner from "@features/home/organisms/Banner/Banner";
 
-const left = {
+const firstBannerLeft = {
   emphasizedTitle: 'Available now',
   title: 'New on Marvel',
   description: 'Look for the latest comics!',
@@ -14,13 +14,13 @@ const left = {
   ]
 };
 
-const right = {
+const firstBannerRight = {
   backgroundImage: 'banner-background-1.jpeg'
 };
 
 const HomePage = () => {
   return (<React.Fragment>
-    <Banner left={left} right={right}></Banner>
+    <Banner key={1} left={firstBannerLeft} right={firstBannerRight}></Banner>
   </React.Fragment>);
 };
 

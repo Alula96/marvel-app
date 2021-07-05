@@ -1,5 +1,6 @@
 import React from "react";
-import Header from "../../organisms/Header/Header";
+import Header from "@components/organisms/Header/Header";
+import Footer from "@components/organisms/Footer/Footer";
 
 import "./MainLayout.scss";
 
@@ -7,9 +8,8 @@ const MainLayout = ({ children }) => {
   return (
     <React.Fragment>
       <Header/>
-      <main className="t-layout">
-        { children }
-      </main>
+      { children }
+      <Footer/>
     </React.Fragment>
   );
 };
