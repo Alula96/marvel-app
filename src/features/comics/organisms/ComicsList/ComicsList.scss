@@ -1,0 +1,12 @@
+@import '../../../../styles/settings/settings.scss';
+@import '../../../../styles/tools/tools.scss';
+
+.o-comics-list {
+  width: 95%;
+  margin: 0 auto;
+  max-width: calculate-size(1500);
+
+  h2 {
+    color: get-color('font', 'primary');
+  }
+}
