@@ -1,6 +1,6 @@
 import React from "react";
 import Banner from "@features/home/organisms/Banner/Banner";
-import ComicsList from "../organisms/ComicsList/ComicsList";
+import ComicsListWrapper from '@features/comics/templates/ComicsListWrapper/ComicsListWrapper';
 
 const firstBannerLeft = {
   backgroundImage: 'banner-background-2.jpeg'
@@ -15,7 +15,7 @@ const firstBannerRight = {
 const ComicsPage = () => {
   return <main>
       <Banner key={1} left={firstBannerLeft} right={firstBannerRight}></Banner>
-      <ComicsList></ComicsList>
+      <ComicsListWrapper></ComicsListWrapper>
     </main>;
 };
 

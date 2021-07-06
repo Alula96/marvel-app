@@ -2,11 +2,12 @@
 @import '../../../../styles/tools/tools.scss';
 
 .o-comics-list {
-  width: 95%;
-  margin: 0 auto;
-  max-width: calculate-size(1500);
+  display: flex;
+  flex-wrap: wrap;
 
-  h2 {
-    color: get-color('font', 'primary');
+  article {
+    width: 20%;
+    min-width: 100px;
+    padding: 0.5rem
   }
 }

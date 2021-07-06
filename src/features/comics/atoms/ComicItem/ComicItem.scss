@@ -1,0 +1,12 @@
+@import '../../../../styles/settings/settings.scss';
+@import '../../../../styles/tools/tools.scss';
+
+.a-comic-item {
+  &__title {
+    font-size: calculate-size(25);
+    font-weight: bold;
+  }
+  img {
+    width: 100%;
+  }
+}

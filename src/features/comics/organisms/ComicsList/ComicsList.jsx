@@ -2,13 +2,13 @@
 import React, { useEffect } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
-import { formatDateToDefault } from "../../../../utils/date.utils";
+import { formatDateToDefault } from "@utils/date.utils";
 import { getComics } from "../../redux/actions";
 
+import ComicItem from '@features/comics/atoms/ComicItem/ComicItem';
 import "./ComicsList.scss";
 
-//import { formatDate } from "@utils/date.utils.js";
-// <h2 className="decorated-title"> { formatDate(new Date()) }: New releases </h2>
+
 
 const ComicsList = () => {
   const comics = useSelector(state => state.comics);
@@ -26,12 +26,7 @@ const ComicsList = () => {
   const renderComics = () => {
     const result = [];
     comics.forEach((comic, index) => {
-      console.log(comic);
-      result.push(<article key={index}>
-        <img src={`${comic.thumbnail.path}/portrait_incredible.${comic.thumbnail.extension}`} title={comic.title} alt={comic.title}/>
-        <p>{comic.title}</p>
-        <p>{comic.id}</p>
-      </article>);
+      result.push(<ComicItem key={index} thumbnail={comic.thumbnail} title={comic.title} id={comic.id}/>);
     });
     return result;
   }
