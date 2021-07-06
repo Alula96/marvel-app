@@ -19,9 +19,9 @@ const firstBannerRight = {
 };
 
 const HomePage = () => {
-  return (<React.Fragment>
+  return (<main>
     <Banner key={1} left={firstBannerLeft} right={firstBannerRight}></Banner>
-  </React.Fragment>);
+  </main>);
 };
 
 export default HomePage;

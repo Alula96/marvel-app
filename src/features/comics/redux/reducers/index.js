@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import { LOADING_ERROR, LOADING_IN_PROGRESS, LOADING_SUCCESS } from '../types';
+import { APPEND_COMICS, LOADING_ERROR, LOADING_IN_PROGRESS, LOADING_SUCCESS, SET_FILTER } from '../types';
 
 const loadingError = (state = false, action) => {
   switch (action.type) {
@@ -19,9 +19,22 @@ const loadingInProgress = (state = false, action) => {
   }
 }
 
-const comics = (state = [], action) => {
-  console.log({action});
+const filterReducer = (state = { }, action) => {
   switch (action.type) {
+    case SET_FILTER:
+      return action.filter;
+    default:
+      return state;
+  }
+}
+
+const comicsReducer = (state = [], action) => {
+  switch (action.type) {
+    case APPEND_COMICS:
+      return [
+        ...state,
+        ...action.comics
+      ];
     case LOADING_SUCCESS:
       return action.comics;
     default:
@@ -30,7 +43,8 @@ const comics = (state = [], action) => {
 }
 
 export default combineReducers({
-  comics: comics,
+  filter: filterReducer,
+  comics: comicsReducer,
   loadingError,
   loadingInProgress
 })

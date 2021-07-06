@@ -15,11 +15,12 @@ export default class ComicsService {
    * @param {*} dateRange format = YYYY-MM-DD,YYYY-MM-DD
    * @param {*} orderBy posible options = [ focDate, onsaleDate, title, issueNumber, modified, -focDate, -onsaleDate, -title, -issueNumber, -modified ]
    */
-  getComics = (dateRange, orderBy) => {
+  getComics = (dateRange, orderBy, offset) => {
     return axios.get(`${this.apiEndpoint}/comics`, {
       params: {
         dateRange: dateRange ? dateRange : undefined,
         orderBy: orderBy ? orderBy : undefined,
+        offset: offset ? offset : 0,
         ...this.authApiParams
       }
     });

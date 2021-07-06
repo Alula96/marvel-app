@@ -4,7 +4,6 @@ import React from "react";
 import BannerContent from "../../molecules/BannerContent/BannerContent";
 
 
-
 const Banner = ({ left, right}) => {
 
   return (
