@@ -1,8 +1,8 @@
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('Given an App component', () => {
   render(<App />);
-  const app = document.getElementsByClassName("App");
-  expect(app).toBeTruthy();
+  expect(document.querySelector('header')).toBeTruthy();
+  expect(document.querySelector('footer')).toBeTruthy();
 });

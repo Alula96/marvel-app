@@ -6,13 +6,11 @@ import Routes from "@routes/routes";
 
 function App() {
   return (
-    <React.Fragment>
-      <BrowserRouter>
-        <MainLayout>
-          <Routes></Routes>
-        </MainLayout>
-      </BrowserRouter>
-    </React.Fragment>
+    <BrowserRouter>
+      <MainLayout>
+        <Routes></Routes>
+      </MainLayout>
+    </BrowserRouter>
   );
 }
 

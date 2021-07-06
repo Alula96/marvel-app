@@ -4,7 +4,12 @@ html,
 body,
 #root {
   font-family: get-font("primary", "regular");
-   min-height: 100%;
+  color: get-color("font", "primary");
+  min-height: 100%;
+}
+
+p {
+  color: get-color("font", "primary");
 }
 
 #root {

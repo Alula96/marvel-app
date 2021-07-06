@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import { act } from 'react-dom/test-utils';
-import { BrowserRouter } from 'react-router-dom';
+
 import Footer from './Footer';
 
 
