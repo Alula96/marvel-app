@@ -17,7 +17,8 @@ p {
   &::after {
     content: '';
     display: block;
-    height: 250px;
+    height: $footer-height;
+    max-height: $max-footer-height;
   }
 }
 

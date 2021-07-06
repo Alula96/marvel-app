@@ -9,6 +9,8 @@
   display: flex;
   
   width: 100%;
+  height: $footer-height;
+  max-height: $max-footer-height;
   padding: 1rem 2rem;
   background-color: get-color('background', 'tertiary');
 
@@ -16,13 +18,14 @@
     width: 50%;
     padding: 1rem;
     header {
-      font-size: calculate-size(30);
+      font-size: 120%;
       color: get-color('font', 'secondary');
       margin-bottom: 0.5rem;
     }
     p {
       font-family: get-font('secondary', 'regular');
-      line-height: 1.3rem;
+      font-size: 80%;
+      line-height: 120%;
     }
   }
 
@@ -39,12 +42,13 @@
   
       img {
         max-width: 25px;
+        width: 40%;
         margin-right: 1rem;
       }
 
       a {
         font-family: get-font('secondary', 'bold');
-        font-size: calculate-size(16);
+        font-size: 80%;
         color: get-color('font', 'secondary');
         letter-spacing: 1px;
         &:visited {
